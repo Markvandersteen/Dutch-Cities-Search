@@ -1,8 +1,9 @@
 import Fuse from "fuse.js";
 import { City } from "./types/city";
 
-export const searchCity = (cities: City[], input: string) => {
-  const fuse = new Fuse(cities, {
+import cityData from "./cities.json";
+export const searchCity = (input: string): Fuse.FuseResult<City>[] => {
+  const fuse = new Fuse(cityData, {
     keys: ["title"],
   });
   return fuse.search(input);

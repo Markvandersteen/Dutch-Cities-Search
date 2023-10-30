@@ -24,6 +24,9 @@ jobs:
             - name: Install Dependencies
               run: npm i
 
+            - name: Fetch
+              run: npm run fetch
+
             - name: Build
               run: npm run build
 

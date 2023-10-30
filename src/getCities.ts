@@ -1,21 +1,17 @@
 import { City } from './types/city';
+import { writeFileSync } from 'fs';
 
-export interface Fetcher<T> {
-    fetchData: () => Promise<T[]>;
-}
-export class CitiesFetcher implements Fetcher<City> {
-    async fetchData(): Promise<City[]> {
-        const response = await fetch(
-            'https://opendata.cbs.nl/ODataApi/OData/85516NED/Woonplaatsen'
-        );
-        const json = await response.json();
-
-        return json.value.map((city: any): City => {
-            return {
-                key: city.Key,
-                title: city.Title,
-                categoryGroupId: city.CategoryGroupID,
-            };
-        }) as City[];
-    }
-}
+const FILE_PATH = 'dist/cities.json';
+const getCitiesDataToJson = async (): Promise<void> => {
+    const response = await fetch('https://opendata.cbs.nl/ODataApi/OData/85516NED/Woonplaatsen');
+    const json = await response.json();
+    const mappedJson = json.value.map((city: any): City => {
+        return {
+            key: city.Key,
+            title: city.Title,
+            categoryGroupId: city.CategoryGroupID,
+        };
+    }) as City[];
+    writeFileSync(FILE_PATH, JSON.stringify(mappedJson), 'utf8');
+};
+getCitiesDataToJson();

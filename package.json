@@ -1,29 +1,35 @@
 {
-    "name": "dutch-cities-format",
-    "version": "1.0.0",
-    "description": "",
-    "main": "index.js",
-    "scripts": {
-        "fetch": "ts-node src/getCities.ts",
-        "test": "jest",
-        "build": "tsc"
-    },
-    "author": "",
-    "license": "ISC",
-    "devDependencies": {
-        "@babel/preset-env": "^7.23.2",
-        "@babel/preset-typescript": "^7.23.2",
-        "@types/jest": "^29.5.6",
-        "@types/node": "^20.8.7",
-        "chokidar": "^3.5.3",
-        "jest": "^29.7.0",
-        "prettier": "3.0.3",
-        "rimraf": "^5.0.5",
-        "ts-loader": "^9.5.0",
-        "ts-node": "^10.9.1",
-        "typescript": "^5.2.2"
-    },
-    "dependencies": {
-        "fuse.js": "^6.6.2"
-    }
+  "name": "dutch-cities-format",
+  "version": "1.0.0",
+  "description": "small util library to get dutch cities in a formatted way",
+  "author": "Mark van der Steenhoven",
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": {
+    "fetch": "ts-node src/getCities.ts",
+    "prepare-publish": "cp package.json dist/package.json && cp README.md dist/README.md",
+    "test": "jest",
+    "publish": "npm run fetch && npm run build && npm run prepare-publish && cd dist && npm publish",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Markvandersteen/Dutch-Cities-Search"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.23.2",
+    "@babel/preset-typescript": "^7.23.2",
+    "@types/jest": "^29.5.6",
+    "@types/node": "^20.8.7",
+    "chokidar": "^3.5.3",
+    "jest": "^29.7.0",
+    "prettier": "3.0.3",
+    "rimraf": "^5.0.5",
+    "ts-loader": "^9.5.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "fuse.js": "^6.6.2"
+  }
 }

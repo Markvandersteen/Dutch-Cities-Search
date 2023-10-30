@@ -1,0 +1,36 @@
+name: Dependabot
+
+on:
+  # Trigger the workflow when Dependabot creates pull requests
+  pull_request:
+    branches:
+      - "dependabot/*"
+
+jobs:
+  update-dependencies:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Merge Dependabot PR (if necessary)
+        run: |
+          # Check if the pull request is mergeable
+          if [[ $(curl -s -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+            -X GET "https://api.github.com/repos/$GITHUB_REPOSITORY/pulls/$GITHUB_PULL_REQUEST" \
+            | jq -r '.mergeable') == "true" ]]; then
+            echo "Merging Dependabot PR..."
+            curl -s -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+              -X PUT "https://api.github.com/repos/$GITHUB_REPOSITORY/pulls/$GITHUB_PULL_REQUEST/merge"
+          else
+            echo "Dependabot PR is not mergeable."
+          fi

@@ -1,7 +1,7 @@
 import { City } from './types/city';
 import { writeFileSync } from 'fs';
 
-const FILE_PATH = 'dist/cities.json';
+const FILE_PATH = 'data/cities.json';
 export const getCitiesDataToJson = async (): Promise<void> => {
     const response = await fetch('https://opendata.cbs.nl/ODataApi/OData/85516NED/Woonplaatsen');
     const json = await response.json();

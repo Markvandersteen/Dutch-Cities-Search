@@ -1,5 +1,5 @@
 export type City = {
-    key: number;
+    key: string;
     title: string;
     categoryGroupId: number;
 };

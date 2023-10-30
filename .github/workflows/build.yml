@@ -24,11 +24,11 @@ jobs:
             - name: Install Dependencies
               run: npm i
 
+            - name: Test
+              run: npm test
+
             - name: Fetch
               run: npm run fetch
 
             - name: Build
               run: npm run build
-
-            - name: Test
-              run: npm test

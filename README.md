@@ -1,7 +1,3 @@
-Thank you for providing more details about the objects returned by your package. Here's an updated README that reflects the object structure:
-
----
-
 # Dutch Cities Formatter
 
 ## Description

@@ -5,11 +5,11 @@ import { searchCity } from './search';
 
 const FILE_PATH = 'dist/cities.json';
 
-const writeCitiesToDist = async (cities: City[]) => {
+export const writeCitiesToDist = async (cities: City[]) => {
     return fs.writeFileSync(FILE_PATH, JSON.stringify(cities), 'utf8');
 };
 
-const readCities = (): City[] => {
+export const readCities = (): City[] => {
     const json = fs.readFileSync(FILE_PATH, 'utf8');
     return JSON.parse(json) as City[];
 };

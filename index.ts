@@ -27,4 +27,4 @@ export const search = async (needle: string, dataFetcher: Fetcher<City>) => {
     return searchCity(haystack, needle)[0];
 };
 
-console.log(search('asmterdam', new CitiesFetcher()));
+console.log(search('BERKEL', new CitiesFetcher()));

@@ -1,5 +1,9 @@
 # Dutch Cities Formatter
 
+## Build status
+
+[![Build and Test](https://github.com/markvandersteen/Dutch-Cities-Search/workflows/Build%20and%20Test/badge.svg)](https://github.com/markvandersteen/Dutch-Cities-Search/actions)
+
 ## Description
 
 The `dutch-cities-formatter` is a lightweight JavaScript package that provides two essential functions for handling Dutch city names: `search` and `searchOne`. These functions allow you to search for Dutch city names, correct capitalization, expand abbreviations, and handle common misspellings.

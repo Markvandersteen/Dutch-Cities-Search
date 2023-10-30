@@ -1,6 +1,6 @@
 {
   "name": "dutch-cities-formatter",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "small util library to get dutch cities in a formatted way",
   "author": "Mark van der Steenhoven",
   "license": "MIT",

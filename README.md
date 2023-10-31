@@ -59,8 +59,8 @@ const matchingCities = search("amst"); // Example search for cities starting wit
 console.log(matchingCities);
 /* Output:
 [
-  { key: 'amsterdam', title: 'Amsterdam' },
-  { key: 'amstelveen', title: 'Amstelveen' },
+  { key: 'WP3594', title: 'Amsterdam' },
+  { key: 'WP1050', title: 'Amstelveen' },
   // ...
 ]
 */

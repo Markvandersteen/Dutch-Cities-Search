@@ -52,15 +52,15 @@ To use the `dutch-cities-formatter` package in your project, follow these steps:
 
 ### `search(cityName: string): City[]`
 
-The `search` function allows you to search for Dutch city names that match the input `cityName`. It returns an array of city objects, each containing a `key`, `title`, and `categoryGroupId`.
+The `search` function allows you to search for Dutch city names that match the input `cityName`. It returns an array of city objects, each containing a `key` and `title`.
 
 ```javascript
 const matchingCities = search("amst"); // Example search for cities starting with 'amst'
 console.log(matchingCities);
 /* Output:
 [
-  { key: 'amsterdam', title: 'Amsterdam', categoryGroupId: 1 },
-  { key: 'amstelveen', title: 'Amstelveen', categoryGroupId: 2 },
+  { key: 'amsterdam', title: 'Amsterdam' },
+  { key: 'amstelveen', title: 'Amstelveen' },
   // ...
 ]
 */
@@ -75,19 +75,18 @@ const bestMatch = searchOne("rottrdam"); // Example search for a closely matchin
 console.log(bestMatch);
 /* Output:
 {
-  key: 'rotterdam',
+  key: 'WP3086',
   title: 'Rotterdam',
-  categoryGroupId: 1
 }
 */
 ```
 
-These functions return city objects with `key`, `title`, and `categoryGroupId`, ensuring that your Dutch city names are consistently formatted and corrected, making them suitable for various applications.
+These functions return city objects with `key`, `title` ensuring that your Dutch city names are consistently formatted and corrected, making them suitable for various applications.
 
 ## License
 
-This package is open-source and available under the MIT License. Feel free to use it in your projects and contribute to its development on [GitHub](https://github.com/yourusername/dutch-cities-formatter).
+This package is open-source and available under the MIT License. Feel free to use it in your projects and contribute to its development on [GitHub](https://github.com/Markvandersteen/Dutch-Cities-Search).
 
-For more details and usage examples, please refer to the [documentation](https://github.com/yourusername/dutch-cities-formatter).
+For more details and usage examples, please refer to the [documentation](https://https://github.com/Markvandersteen/Dutch-Cities-Search).
 
 ---

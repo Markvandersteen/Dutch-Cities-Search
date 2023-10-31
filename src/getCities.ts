@@ -12,7 +12,6 @@ export const getCitiesDataToJson = async (): Promise<void> => {
     return {
       key: city.Key,
       title: city.Title,
-      categoryGroupId: city.CategoryGroupID,
     };
   });
   writeFileSync(FILE_PATH, JSON.stringify(mappedJson), "utf8");

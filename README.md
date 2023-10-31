@@ -87,6 +87,6 @@ These functions return city objects with `key`, `title` ensuring that your Dutch
 
 This package is open-source and available under the MIT License. Feel free to use it in your projects and contribute to its development on [GitHub](https://github.com/Markvandersteen/Dutch-Cities-Search).
 
-For more details and usage examples, please refer to the [documentation](https://https://github.com/Markvandersteen/Dutch-Cities-Search).
+For more details and usage examples, please refer to the [documentation](https://github.com/Markvandersteen/Dutch-Cities-Search).
 
 ---

@@ -21,14 +21,13 @@ describe("search", () => {
 
     expect(result).toEqual([
       {
-        item: { key: "WP3594", title: "Amsterdam", categoryGroupId: 1 },
+        item: { key: "WP3594", title: "Amsterdam" },
         refIndex: 67,
       },
       {
         item: {
           key: "WP3569",
           title: "Amsterdam-Duivendrecht",
-          categoryGroupId: 1,
         },
         refIndex: 68,
       },
